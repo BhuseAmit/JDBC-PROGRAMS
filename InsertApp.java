@@ -28,8 +28,8 @@ public class InsertApp {
 
 			// Step 4 Process the resultSet and execute the query
 			String sqlInsertQuery = "INSERT INTO STUDENT(`SNAME`,`SAGE`,`SADDRESS`) VALUES('Rinku',25,'KKR')";
-			int rowCount = statement.executeUpdate(sqlInsertQuery);
-			System.out.println("NO OF ROWAFFECTED :: " + rowCount);
+			int rowAffected = statement.executeUpdate(sqlInsertQuery);
+			System.out.println("NO OF ROWAFFECTED :: " + rowAffected);
 
 			// Step 5 Handle the Exception if occur
 		} catch (SQLException e) {
@@ -41,7 +41,7 @@ public class InsertApp {
 			if (connection != null) {
 				try {
 					connection.close();
-					System.out.println("CLOSING THE RESOURCES");
+					System.out.println("CLOSING All THE RESOURCES");
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}
