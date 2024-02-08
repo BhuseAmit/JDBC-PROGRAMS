@@ -12,7 +12,7 @@ public class TestApp{
 				ResultSet resultSet = null;
 				try {
 					Class.forName("com.mysql.cj.jdbc.Driver");
-					System.out.println("Driver loaded successfully.....");
+					System.out.println("DRIVER LOADED SUCCESSFULLY.....");
 								
 					System.out.println();
 					
@@ -21,14 +21,14 @@ public class TestApp{
 					String user = "root";
 					String password = "BhuseAmit@123";
 					connection = DriverManager.getConnection(url,user,password);
-					System.out.println("Cnnection is Established.....");
+					System.out.println("CONNECTION ESTABLISHED SUCCESSFULLY.....");
 					System.out.println("The implementation class name is :: "+ connection.getClass().getName());
 					
 					System.out.println();
 				  
 					//Step3. Create Statement Object and Send the Query
 					 statement = connection.createStatement();
-					System.out.println("Statement object is created.....");
+					System.out.println("STATEMENT OBJECT CREATED.....");
 					System.out.println("The implementation class name is :: "+statement.getClass().getName());
 				
 					System.out.println();
@@ -36,7 +36,7 @@ public class TestApp{
 					//Step4. Execute the Query and process the resultSet
 					String sqlSelectQuery="select id,name,age,address from cricketplayersdetails";
 					 resultSet=statement.executeQuery(sqlSelectQuery);
-					System.out.println("ResultSet  object is created.....");
+					System.out.println("RESULTSET OBJECT CREATED.....");
 					System.out.println("The implementation class name is :: "+ resultSet.getClass().getName());
 				
 					System.out.println();
@@ -61,7 +61,7 @@ public class TestApp{
 					if (connection!=null) {
 		                try{
 		                	connection.close();
-		                	System.out.println("Closing the Resources...");
+		                	System.out.println("CLOSING ALL RESOURCES...");
 		                }
 		                catch (SQLException se){
 		                    se.printStackTrace();
